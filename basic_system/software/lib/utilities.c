@@ -68,3 +68,16 @@
 		time--;
 	}
 }
+
+// ############################################################################################
+// String compare, buffered string with immediate const char string
+   unsigned char string_cmpc(unsigned char *string1, const char *string2, unsigned char length)
+// ############################################################################################
+{
+	while(length != 0){
+		if(*string1++ != (unsigned char)*string2++)
+			return(0); // missmatch
+		length--;
+	}
+	return(1); // match
+}
