@@ -1,18 +1,24 @@
-main.o: main.c storm_core.h storm_soc_basic.h io_driver.c io_driver.h \
-  utilities.c utilities.h uart.c uart.h
+main.o: main.c ../lib/storm_core.h ../lib/storm_soc_basic.h \
+  ../lib/io_driver.c ../lib/io_driver.h ../lib/storm_core.h \
+  ../lib/storm_soc_basic.h ../lib/utilities.c ../lib/utilities.h \
+  ../lib/uart.c ../lib/uart.h
 
-storm_core.h:
+../lib/storm_core.h:
 
-storm_soc_basic.h:
+../lib/storm_soc_basic.h:
 
-io_driver.c:
+../lib/io_driver.c:
 
-io_driver.h:
+../lib/io_driver.h:
 
-utilities.c:
+../lib/storm_core.h:
 
-utilities.h:
+../lib/storm_soc_basic.h:
 
-uart.c:
+../lib/utilities.c:
 
-uart.h:
+../lib/utilities.h:
+
+../lib/uart.c:
+
+../lib/uart.h:

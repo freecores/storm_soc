@@ -1,8 +1,8 @@
-#include "storm_core.h"
-#include "storm_soc_basic.h"
-#include "io_driver.c"
-#include "utilities.c"
-#include "uart.c"
+#include "../lib/storm_core.h"
+#include "../lib/storm_soc_basic.h"
+#include "../lib/io_driver.c"
+#include "../lib/utilities.c"
+#include "../lib/uart.c"
 
 // +------------------------------+
 // |    Simple Program Demo       |
@@ -36,7 +36,7 @@ int main(void)
 	VICVectAddr0 = (unsigned long)timer0_isr;
 	VICVectCntl0 = (1<<5) | 0; // enable and channel select = 0 (timer0)
 	VICIntEnable = (1<<0); // enable channel 0 (timer0)
-	io_enable_irq(); // enable IRQ
+	io_enable_xint(); // enable IRQ
 
 	// Intro
 	uart0_printf("\r\n\r\nSTORM SoC Basic Configuration\r\n");
