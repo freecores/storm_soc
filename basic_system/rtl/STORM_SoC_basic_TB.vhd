@@ -78,8 +78,7 @@ architecture Structure of STORM_SoC_basic_TB is
 			SPI_P2_CS_O   : out   STD_LOGIC_VECTOR(01 downto 0);
 
 			-- PWM Port 0 --
-			PWM0_PORT_O   : out   STD_LOGIC_VECTOR(07 downto 0);
-			IRQ_D : in std_logic
+			PWM0_PORT_O   : out   STD_LOGIC_VECTOR(07 downto 0)
 
 --			-- SDRAM Interface --
 --			SDRAM_CLK_O   : out   STD_LOGIC;
@@ -102,12 +101,6 @@ begin
 	-- ----------------------------------------------------------------------
 		CLK <= not CLK after 5 ns;
 		RST <= '0', '1' after 200 ns;
-
-
-
-	-- Interrupt Generator -----------------------------------------------
-	-- ----------------------------------------------------------------------
-		IRQ <= '0', '1' after 40000 ns;-- '0' after 30 ns;
 
 
 
@@ -157,8 +150,7 @@ begin
 			SPI_P2_CS_O   => open,
 
 			-- PWM Port 0 --
-			PWM0_PORT_O   => open,
-			IRQ_D => IRQ
+			PWM0_PORT_O   => open
 
 --			-- SDRAM Interface --
 --			SDRAM_CLK_O   : out   STD_LOGIC;
